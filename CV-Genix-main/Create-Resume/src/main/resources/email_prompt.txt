@@ -1,0 +1,20 @@
+Write a polished professional email based on the prompt below.
+
+Requirements:
+- Keep the email concise, clear, and ready to send.
+- Use only the facts and intent given in the prompt. Do not invent names, dates, job titles, or achievements.
+- Make the tone match the requested style while staying professional.
+- Produce a subject line and a complete email body.
+- The final email should feel natural, human, and recruiter-friendly.
+
+Prompt:
+"{{emailPrompt}}"
+
+Tone:
+"{{tone}}"
+
+Return the response as JSON with these keys:
+subject (string)
+body (string)
+tone (string)
+highlights (array of 3 short strings)

@@ -1,0 +1,51 @@
+Build a live interview-preparation pack in JSON based on the candidate profile below.
+
+Rules:
+- Create practical interview questions tailored to the candidate profile and target role.
+- Prefer questions a recruiter, hiring manager, or senior engineer would ask in a real interview.
+- Keep wording realistic, specific, and role-aware.
+- Do not invent experience or skills that are not supported by the profile.
+- Mix technical, project-based, behavioral, and HR questions when appropriate.
+- If a job description is provided, align the questions to it.
+- Return exactly {{questionCount}} questions when possible. If the profile is sparse, return at least 5 questions.
+- Keep the responses concise and useful for interview practice.
+- Generate non-repetitive question wording for each request by using the variation token.
+- Make the question set meaningfully different when interview situation changes (for example phone screen vs HR vs system design round).
+- Avoid repeating the same question text in the same response.
+
+Candidate Profile:
+"{{candidateDescription}}"
+
+Target Role:
+"{{targetRole}}"
+
+Job Description:
+"{{jobDescription}}"
+
+Interview Style:
+"{{interviewStyle}}"
+
+Interview Situation:
+"{{interviewSituation}}"
+
+Variation Token:
+"{{variationToken}}"
+
+JSON Structure Requirements:
+role (string)
+interviewStyle (string)
+interviewSituation (string)
+questionCount (number)
+focusAreas (array of strings)
+questions (array of objects)
+Each question object must include:
+category (string)
+difficulty (string)
+question (string)
+whyItMatters (string)
+sampleAnswer (string, 4-6 realistic sentences in first person with concrete example and result)
+sampleAnswerOutline (array of strings)
+prepTips (array of strings)
+strengthsToHighlight (array of strings)
+redFlagsToAvoid (array of strings)
+closingAdvice (string)

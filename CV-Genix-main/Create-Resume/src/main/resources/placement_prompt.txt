@@ -1,0 +1,25 @@
+Generate placement opportunities and career advice in JSON format based on the following user description. Analyze the user's skills, experience, education, and background to recommend suitable job roles, companies, locations, and prioritize them based on fit and market demand.
+
+Generation Rules:
+- Analyze the user's technical skills, experience level, education, and any mentioned preferences.
+- Recommend job roles that match the user's profile, considering current market trends in IT.
+- Suggest companies that typically hire for those roles, focusing on major tech companies, startups, and industry leaders.
+- Include locations where these opportunities are abundant, considering remote work options.
+- Prioritize opportunities: High (excellent fit), Medium (good fit), Low (possible but less ideal).
+- Provide brief reasons for each recommendation.
+- Do not invent skills or experience not supported by the description.
+- Consider the user's location if mentioned for local opportunities.
+
+Input Description:
+"{{userDescription}}"
+
+JSON Structure Requirements:
+opportunities: A list of opportunity objects. Each opportunity should include:
+role (string): The job title or role
+companies (array of strings): List of companies that might be interested
+locations (array of strings): Possible locations for these roles
+priority (string): "High", "Medium", or "Low"
+fitScore (number): A score from 1-100 indicating how well the user's profile matches this role
+reason (string): Brief explanation why this is a good fit
+
+careerAdvice: A string with general career advice based on the profile.
